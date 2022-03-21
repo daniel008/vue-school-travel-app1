@@ -1,10 +1,12 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from '@/view/Home.vue'
-import About from '@/view/About.vue'
 
 const routes = [
   {path: '/', name: 'Home', component: Home},
-  {path: '/about', name: 'About', component: About}
+  {path: '/brazil', name: 'Brazil', component: () => import('@/view/Brazil.vue')},
+  {path: '/hawaii', name: 'Hawaii', component: () => import('@/view/Hawaii.vue')},
+  {path: '/jamaica', name: 'Jamaica', component: () => import('@/view/Jamaica.vue')},
+  {path: '/panama', name: 'Panama', component: () => import('@/view/Panama.vue')}
 ]
 
 const router = createRouter({
