@@ -1,5 +1,5 @@
 <template>
-  <section class="destination">
+  <section v-if="destination" class="destination">
     <h1>{{destination.name}}</h1>
     <div class="destination-detaila">
       <img :src="`/images/${destination.image}`" :alt="destination.name">
@@ -20,6 +20,8 @@ export default {
     destination() {
       return sourceData.destinations.find(destination => destination.id === this.destinationId)
     }
-  }
+  },
+
+
 }
 </script>
